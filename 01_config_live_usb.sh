@@ -13,6 +13,6 @@ echo ''
 echo "---------"
 echo ''
 
-echo "-----------------"
-echo "CONFIG COMPLETED!"
-echo "-----------------"
+echo "----------------"
+echo "CONFIG COMPLETED"
+echo "----------------"
