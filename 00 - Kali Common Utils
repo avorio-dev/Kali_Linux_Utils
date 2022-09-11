@@ -52,8 +52,12 @@ reaver --bssid <bssid_target> --channel <channel_target> --interface
 crunch <min><max> <characters_set> [-t <pattern>] [-o <filename>]
 
 
-->Crack WPA2 network
+->Crack WPA2 network with wordlist in storage
 -> aircarck-ng <file_handshake>.cap -w <wordlist>.txt
+
+
+->Crack WPA2 network without wordlist in storage
+-> crunch <min> <max> | aircrack-ng -w -b <bssid_network> <file_handshake>.cap
 
 
 ->Discover all devices connected to your network
