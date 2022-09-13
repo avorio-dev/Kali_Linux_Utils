@@ -57,7 +57,7 @@ crunch <min><max> <characters_set> [-t <pattern>] [-o <filename>]
 
 
 ->Crack WPA2 network without wordlist in storage
--> crunch <min> <max> | aircrack-ng -w -b <bssid_network> <file_handshake>.cap
+-> crunch <min> <max> | aircrack-ng -w - -b <bssid_network> <file_handshake>.cap
 
 
 ->Discover all devices connected to your network
