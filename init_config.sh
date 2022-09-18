@@ -6,7 +6,7 @@ echo ''
 echo "---------"
 echo ''
 
-echo "-> 01 - Setting QWERY layout keyboard.."
+echo "-> 01 - Setting QWERTY layout keyboard.."
 sudo setxkbmap -layout it
 
 echo ''
