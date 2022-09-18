@@ -1,6 +1,6 @@
-echo "-------------------------------------------------"
-echo "Init. Config: CONFIG WIRELESS ADAPTER FOR HACKING"
-echo "-------------------------------------------------"
+echo "------------------------------------------------------"
+echo "Init. Config: CONFIG WIRELESS ADAPTER FOR MONITOR MODE"
+echo "------------------------------------------------------"
 
 interface='wlan0'
 
