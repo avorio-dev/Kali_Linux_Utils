@@ -95,7 +95,7 @@ crunch $min $max $charSet [-t $pattern] -o $filename
 handshake = "home/Desktop/handshake.cap"
 wordlist  = "home/Desktop/wordlist.txt"
 
--> aircarck-ng $handshake -w $wordlist
+aircarck-ng $handshake -w $wordlist
 
 "------------------------------------------------"
 "-> CRACK WPA2 NETWORK WITH RUNTIME BUILT WORDLIST"
