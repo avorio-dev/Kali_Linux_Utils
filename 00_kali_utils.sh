@@ -130,8 +130,11 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 "------------------------------------------------"
 "-> ARP SPOOFING WITH BETTERCAP"
 interface  = "wlan0"
+caplet     = "$HOME/Desktop/caplet.cap"
 
-bettercap -iface $interface
+"-> $caplet Start with caplet file"
+bettercap -iface $interface [-caplet $caplet]
+
 caplets.update
 caplets.show
 
