@@ -1,4 +1,4 @@
-"COMMON KALI COMMANDS"
+"MOST COMMON KALI COMMANDS"
 
 "------------------------------------------------"
 "-> SET QWERTY MAPKEYS"
